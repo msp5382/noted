@@ -6,6 +6,8 @@ import { Inter } from "next/font/google";
 import { api } from "@/utils/api";
 
 import "@/styles/globals.css";
+import "@/styles/prosemirror.css";
+import "@/styles/editor.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,7 +20,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      <main className={`font-sans ${inter.variable}`}>
+      <main className={`font-sans ${inter.variable} dark`}>
         <Component {...pageProps} />
       </main>
     </SessionProvider>
